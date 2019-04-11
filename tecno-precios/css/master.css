@@ -1,0 +1,599 @@
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0, auto;
+}
+.container{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+   
+}
+
+/* faq's */
+.search{
+    width:100%;
+    position: relative;
+  }
+  .footer{
+    align-items: center;
+  }
+  #footerIconos, #footerAll, #footerLinks{
+    background-color:#0279f6;
+    color: #fff;
+  }
+  #footerLinks div h6 a{
+    color : #fff;
+  }
+  .ins-ic > i, .fb-ic > i, .tw-ic > i{
+    color: white!important;
+  }
+  .img-fluid{
+    background-color: #0279f6;
+  }  
+/* searchbar_iphone */
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #0279f6;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0279f6;
+  background: #0279f6;
+  text-align: center;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap{
+  display: none;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  margin-left: 50%;
+  margin-bottom: 10%
+}
+
+
+
+/* serchbar */
+#arriba{width: 100%;
+	margin: 5px;
+	padding: 0;
+  height: 7vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.imagen_logo { height:100% ;}
+.imagen_bag { height:70% ;
+ display: flex;
+ align-self: center;
+
+}
+
+.buscar-caja {
+  display: flex;
+  align-self: center;
+  margin-top: 2%;
+  transform: translate(-50%, -50%);
+  background: #f6f6f7;
+  height: 30px;
+  border-radius: 30px;
+  padding: 7px;
+ }
+ 
+ .buscar-caja:hover > .buscar-txt {
+  width: 240px;
+  padding: 0 6px;
+  color: black
+ }
+ 
+ .buscar-caja:hover > .buscar-btn {
+  background: white;
+  color: black;
+ }
+ 
+ .buscar-btn {
+  color: #0279f6;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  background: #0279f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+ }
+ 
+ .buscar-btn > i {
+  font-size: 25px;
+ }
+ 
+ .buscar-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  
+ }﻿
+
+
+
+/* .buscar-caja ::placeholder {
+  color: red;
+} */
+/* botones login y registrate en home */
+.log_in{
+ align-self: center;
+ margin-right: 2%;
+ margin-top: 5%;
+}
+
+#arriba ul li {
+    list-style-type: none;
+    align-content: center;
+}
+
+#arriba ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+}
+
+a{
+  margin-right: 5px;
+}
+
+
+/* login.php y registrate.php */
+.articulo1{
+  height: 100vh;
+}
+.form1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.formatoform{
+    border-radius: 20px;
+    line-height: 40px;
+    
+}
+.__h1form , .__h3form {
+  text-align: center;
+  color: #0279f6;
+} 
+
+.__h4login, .__h4registro{
+  text-align: center;
+  color: #0279f6;
+  font-size: 1em;
+}
+.__h4login{
+  font-weight: 100;
+}
+
+.__h4login :hover{
+  text-decoration: underline;
+}
+.borrar{
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+
+
+
+/* navbar */
+
+.flex_del_nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.navbar{
+    background-color: #0279f6
+}
+
+nav ul li a {
+  text-transform:uppercase; 
+}
+
+
+
+
+/* productos pagina princiap */
+#izquierda {
+	width: 50%;
+	display: block;
+	margin: 0;
+	padding: 0;
+	float: left;
+  height: 75vh;
+  overflow: hidden;
+}
+
+
+.imagen_izquierda{
+  width: 100%;
+  height: 100%
+}
+
+#derecha {
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	float: right;
+  height: 37.5vh;
+  overflow: hidden;
+}
+
+.imagen_derecha{
+  width: 100%;
+  height: 100%
+}
+
+#derecha__abajo {
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	float: right;
+  height: 37.5vh;
+  overflow: hidden;
+}
+
+.imagen_derecha_abajo{
+  width: 100%;
+  height: 100%
+}
+
+
+/* slider */
+
+
+
+
+.fondo_de_slider {
+  background-image: url("./img/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+	margin: 0;
+  padding: 2%;
+  height: 65vh;
+  overflow: hidden;
+}
+
+  .__max-width {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+  
+  .__pads-y {
+    padding: 100px 0;
+  }
+  
+  .carousel__w .carousel-inner > * {
+    min-height: 60vh;
+  }
+  
+  .carousel__w .carousel-inner .carousel-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .carousel__w .carousel-inner .carousel-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+  }
+  
+  .carousel__w .carousel-inner .carousel-item.slide1 {
+    background-image: url("../img/slider-iphone1.jpg");
+ 
+    
+    
+    
+
+  }
+  
+  .carousel__w .carousel-inner .carousel-item.slide2 {
+    background-image: url("../img/sliders-envio-gratis.jpg");
+    background-size: contain;
+    width: 100%;
+   
+    
+   
+    
+  }
+  
+  .carousel__w .carousel-inner .carousel-item.slide3 {
+    background-image: url("../img/slider_tecno1.jpg"); 
+    
+   
+    
+  }
+
+  /* producto */
+
+
+
+#wrap{
+	width: 90%;
+	max-width: 1100px;
+  margin: 50px auto;
+}
+.columns_2 figure{
+   width:49%;
+   margin-right:1%;
+}
+.columns_2 figure:nth-child(2){
+	margin-right: 0;
+}
+.columns_3 figure{
+   width:32%;
+   margin-right:1%;
+}
+.columns_3 figure:nth-child(3){
+	margin-right: 0;
+}
+.columns_4 figure{
+   width:32%;
+   margin-right:1%;
+}
+.columns_4 figure:nth-child(4){
+	margin-right: 0;
+}
+.columns_5 figure{
+   width:19%;
+   margin-right:1%;
+}
+.columns_5 figure:nth-child(5){
+	margin-right: 0;
+}
+#columns figure:hover{
+	-webkit-transform: scale(1.1);
+	-moz-transform:scale(1.1);
+	transform: scale(1.1);
+
+}
+#columns:hover figure:not(:hover) {
+	opacity: 0.4;
+}
+div#columns figure {
+	display: inline-block;
+	background: #FEFEFE;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 0px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+div#columns figure img {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+  color: #444;
+  line-height: 1.5;
+  height:60px;
+  font-weight:600;
+  text-overflow:ellipsis;
+}
+
+a.button{
+  padding:10px;
+  background:#0279f6;
+  margin:10px;
+  display:block;
+  text-align:center;
+  color:#fff;
+  transition:all 1s linear;
+  text-decoration:none;
+  text-shadow:1px 1px 3px rgba(0,0,0,0.3);
+  border-radius:3px;
+  border-bottom:3px solid #0279f6;
+  box-shadow:1px 1px 3px rgba(0,0,0,0.3);
+}
+a.button:hover{
+  background:#0279f6;
+  border-bottom:3px solid #0279f6;
+  color:#f1f2f3;
+}
+@media screen and (max-width: 960px) { 
+  #columns figure { width: 49%;}
+}
+@media screen and (max-width: 500px) {
+  #columns figure { width: 100%;}
+}
+
+/* footer */
+
+footer{
+	background-color: #0279f6;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 120px;
+}
+
+
+  
+  /* mediaquerry */
+
+  @media  screen and  (max-width: 1200px) {
+    .carousel__w .carousel-inner .carousel-item.slide2 {
+      background-image: url("../img/Cuál-es-la-mejor-tecnología-para-tu-startup-Mira-esto.jpeg");
+      background-size: cover;
+    background-repeat: no-repeat
+      
+    }
+    .buscar-btn > i {
+      font-size: 22px;
+     }
+     
+     .buscar-txt {
+      border: none;
+      background: none;
+      outline: none;
+      float: left;
+      padding: 0;
+      color: black;
+      font-size: 10px;
+      transition: 0.4s;
+      line-height: 40px;
+      width: 0px;
+    
+     }﻿  
+
+  }
+  
+
+
+  @media  screen and  (max-width: 1100px) {
+   
+    .buscar-caja:hover > .buscar-txt{ 
+      width: 90px;
+      padding: 0 6px;
+      color: black;
+    }
+	
+    #izquierda {
+      width: 80%;
+      height: 70vh;
+    };
+   .imagen_derecha{
+    display: none
+   }
+   #derecha{
+     display: none
+   }
+
+    #derecha__abajo{
+      display: none
+    }
+    
+  
+
+
+
+ @media  screen and  (max-width: 700px) {
+   
+ 
+
+  .buscar-caja:hover > .buscar-txt{ 
+    width: 55px;
+    padding: 0 6px;
+    color: black;
+  }
+
+
+  #izquierda {
+    width: 80%;
+    height: 40vh;
+  };
+ 
+.fondo_de_slider {
+  background-image: url("./img/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+	margin: 0;
+  padding: 2%;
+  height: 65vh;
+  overflow: hidden;
+}
+  
+  .carousel__w .carousel-inner .carousel-item.slide3 {
+    background-image: url("../img/black-friday-2901748_1920.png");  
+   
+  }
+
+  }
+
+  @media  screen and  (max-width: 450px) {
+
+ .buscar-caja{ display: none;
+
+    }
+  
+  .wrap{
+    display: block;
+      width: 30%;
+      transform: translate(-50%, -50%);
+      margin-left: 50%;
+      margin-bottom: 10%
+    }
+  
+    #izquierda {
+      width: 80%;
+      height: 30vh;
+    };
+
+   
+
+  }
