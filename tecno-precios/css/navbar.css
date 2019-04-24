@@ -1,0 +1,19 @@
+
+/* navbar */
+
+.flex_del_nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  
+  .navbar{
+      background-color: #0279f6
+  }
+  
+  nav ul li a {
+    text-transform:uppercase; 
+  }
+  
+  
