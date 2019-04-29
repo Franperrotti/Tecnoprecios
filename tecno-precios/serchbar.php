@@ -25,13 +25,13 @@
         </a>
       </div>
       <!-- <span class="imagen_bag" > <a href=""><img src="img/bag.png" alt=""> </a> </span> -->
-      <ul calss="log_in">
+      <ul class="log_in">
         <!-- <li>  <a href=""><img src="img/bag.png" alt=""> </a>   </li> -->
-        <li class="d-flex">
+        <!--  <li class="d-flex">
           <a href="login.php" target="_blank" class="formato btn btn-primary btn-sm ml-auto ">Login</a>
-        </li>
+        </li>-->
         <li class="d-flex">
-          <a href="registro.php" target="_blank" class="formato btn btn-primary btn-sm ml-auto ">Registrate</a>
+          <a href="registro-o-login.php" target="_blank" class="formato btn btn-primary btn-sm ml-auto micuenta"> <i class="far fa-user-circle"></i>   Ingresar a Mi Cuenta</a>
         </li>
       </ul>
       <!-- <img class="imagen_bag" src="img/bag.png" alt="">  -->

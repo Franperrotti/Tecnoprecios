@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  body{
+    text-align: center;
+  }
+
+.__h3, .__h1{
+    text-align: center;
+    color: #0279f6;
+  }
+
+ /*  .formatoform :hover{
+    text-decoration: none;
+    background-color: white;*/
