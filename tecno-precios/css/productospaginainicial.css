@@ -74,6 +74,7 @@ div#columns figure figcaption {
   font-size: .9rem;
   color: #444;
   line-height: 1.5;
+  margin-left: 37%;
   height:60px;
   font-weight:600;
   text-overflow:ellipsis;
