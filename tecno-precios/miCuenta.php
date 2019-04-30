@@ -1,3 +1,7 @@
+
+<?php
+include_once('searchbar3.php');
+?>
 <?php
 include_once("controladores/funciones.php");
 if(!isset($_SESSION["email"])) {

@@ -43,10 +43,16 @@ body{
     padding-right: 40px;
   }
 
-   .login :hover{
+   .formatoform :hover{
     text-decoration: none;
+    color: white;
   }
 
-  .registro :hover{
-    text-decoration: none;
-  }
+  
+  @media (max-width: 992px) {
+      .imglateral{
+      display: none;
+      }
+    }
+  
+

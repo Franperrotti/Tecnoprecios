@@ -1,3 +1,7 @@
+
+<?php
+include_once('searchbar2.php');
+?>
 <?php
 include_once("controladores/funciones.php");
 if($_POST){
@@ -87,7 +91,7 @@ if($_POST){
 
             <article class="logoformulario articulo2  col-12 col-md-12 col-lg-6">
 
-                <img width="100%" id="imgform" src="img/tecnolog.png" alt="">
+                <img class="imglateral" width="100%" id="imgform" src="img/tecnolog.png" alt="">
 
             </article>
 

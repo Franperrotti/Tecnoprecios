@@ -1,3 +1,9 @@
+<?php
+include_once('searchbar2.php');
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +20,7 @@
 <body>
     <div class="container-fluid p-0 __divregistro">
 
-        <section class="miCuenta row ">
+            <section class="miCuenta row ">
 
             <article class="formulario1 articulo1 col-12  col-md-12 col-lg-6">
                 <h1 class="__h1form">Ingresar a Mi Cuenta</h1>
@@ -22,19 +28,19 @@
                 <br>
                 <h4 class="__h4login">¿Aún no tiene cuenta? Cree una.</h4>
                 <br>
-                <button type="button" class="formatoform btn btn-outline-primary btn-lg registro"><a href="registro.php" target="_blank">Registrarse</a></button>
+                <button type="button" class="formatoform btn btn-outline-primary btn-lg registro"><a href="registro.php" >Registrarse</a></button>
                 <br>
                 <br>
                 <h4 class="__h4login">¿Ya tiene Cuenta?</h4>
                 <br>
-                <button type="button" class=" formatoform btn btn-outline-primary btn-lg login"><a href="login.php" target="_blank"> Login </a></button>
+                <button type="button" class=" formatoform btn btn-outline-primary btn-lg login"><a href="login.php" > Login </a></button>
                 <br>
 
             </article>
 
             <article class="logoformulario articulo2  col-12 col-md-12 col-lg-6">
 
-                <img width="100%" id="imgform" src="img/tecnolog.png" alt="">
+                <img  class="imglateral"  width="100%" id="imgform" src="img/tecnolog.png" alt="">
 
             </article>
 

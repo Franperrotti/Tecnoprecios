@@ -1,3 +1,7 @@
+<?php
+include_once('searchbar2.php');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
