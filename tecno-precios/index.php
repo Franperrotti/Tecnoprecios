@@ -1,4 +1,7 @@
 <?php
+// head
+include_once('head.php');
+
 // serchbar
 include_once('serchbar.php');
 

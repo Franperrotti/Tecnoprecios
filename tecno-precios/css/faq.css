@@ -1,5 +1,6 @@
-.container{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+#faq-box-colour{
+    background-color: #fff;
+}
+#faq-box-align{
+    text-align: left;
+}
