@@ -5,7 +5,10 @@ function validar($datos,$bandera){
     $errores=[];
     if(isset($datos["nombre"])){
         $nombre = trim($datos["nombre"]);
-        if(empty($nombre)){
+        if(!preg_match("/^[a-zA-Z0-9]*$/", $nombre)){
+            $errores["nombre"]= "Caracteres invalidos";
+        }
+        else if (empty($nombre)){
             $errores["nombre"]= "Complete su nombre de usuario";
         }
     }
