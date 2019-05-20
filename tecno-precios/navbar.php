@@ -20,26 +20,26 @@ include_once('head.php');
           <ul class="navbar-nav ">
 
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tv</a>
+              <a class="nav-link" href="paginaproductos.php">Tv</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Lava Ropas</a>
+              <a class="nav-link" href="paginaproductos.php">Lavaropas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> Heladera</a>
+              <a class="nav-link" href="paginaproductos.php"> Heladera</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Aire Acondicionado</a>
+              <a class="nav-link" href="paginaproductos.php">Aire Acondicionado</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contactanos</a>
+              <a class="nav-link" href="paginaproductos.php">Contactanos</a>
               </span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+              <a class="nav-link" href="paginaproductos.php"><i class="fas fa-shopping-cart"></i></a>
             </li>
           </ul>
 

@@ -3,6 +3,23 @@
 
 
 
+.flexi{
+
+  display: flex;
+}
+.infoconqueryserch{
+ 
+  margin-top: 4%;
+  width: 20%;
+
+}
+
+.productos70{
+  width: 80%;
+
+}
+
+
   #wrap{
 	width: 90%;
 	max-width: 1100px;

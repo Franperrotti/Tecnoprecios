@@ -1,5 +1,9 @@
 
 <?php
+include_once("productos/productos.php");
+?>
+
+<?php
 include_once('head.php');
 ?>
 
@@ -11,51 +15,22 @@ include_once('head.php');
   <div class="container-fluid p-0">
  <!-- Productos -->
 
- <div id="wrap">
-      <div id="columns" class="columns_4">
-        <figure>
-          <img src="img/iphone x.jpg">
-          <figcaption>Iphone XS</figcaption>
-          <span class="price">$44</span>
+<section class= "productos" id="wrap">
+<div id="columns" class="columns_4">
+
+<?php foreach ($producto as $key => $value)  :?>
+<figure>
+          <img src="<?="img/".$value["imagen"]?>">
+
+          <figcaption><?=$value["titulo"]?></figcaption>
+          <span class="price"><?=$value["price"]?></span>
           <a class="button" href="#">Comprar ahora</a>
         </figure>
 
-        <figure>
-          <img src="img/iphone x.jpg">
-          <figcaption>Iphone XS</figcaption>
-          <span class="price">$44</span>
-          <a class="button" href="#">Comprar ahora</a>
-        </figure>
+        <?php endforeach ?>
 
-        <figure>
-          <img src="img/iphone x.jpg">
-          <figcaption>Iphone XS</figcaption>
-          <span class="price">$44</span>
-          <a class="button" href="#">Comprar ahora</a>
-        </figure>
-
-        <figure>
-          <img src="img/iphone x.jpg">
-          <figcaption>Iphone XS</figcaption>
-          <span class="price">$44</span>
-          <a class="button" href="#">Comprar ahora</a>
-        </figure>
-
-        <figure>
-          <img src="img/iphone x.jpg">
-          <figcaption>Iphone XS</figcaption>
-          <span class="price">$44</span>
-          <a class="button" href="#">Comprar ahora</a>
-        </figure>
-
-        <figure>
-          <img src="img/iphone x.jpg">
-          <figcaption>Iphone XS</figcaption>
-          <span class="price">$44</span>
-          <a class="button" href="#">Comprar ahora</a>
-        </figure>
-      </div>
-    </div>
+</div>
+</section>
 
 
     </div>
