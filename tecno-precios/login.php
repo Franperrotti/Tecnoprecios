@@ -1,23 +1,27 @@
 <?php
-include_once("controladores/funciones.php");
+
+require_once("autoload.php");
 if($_POST){
-  
-  $errores= validar($_POST,"login");
+  $usuario = new Usuario($_POST["email"],$_POST["password"]);
+  $errores= $validar->validacionLogin($usuario);
   if(count($errores)==0){
-    $usuario = buscarEmail($_POST["email"]);
-    if($usuario == null){
+
+    $usuarioEncontrado = $Json->buscarEmail($usuario->getEmail());
+    if($usuarioEncontrado == null){
       $errores["email"]="Usuario no existe";
     }else{
-      if(password_verify($_POST["password"],$usuario["password"])===false){
-        $errores["password"]="Error en los datos verifique";
+      if(Autentificador::verificarPassword($usuario->getPassword(),$usuarioEncontrado["password"])===false){
+        $errores["password"]="Error en los datos, verifique";
       }else{
-        seteoUsuario($usuario,$_POST);
-        if(validarUsuario()){
-          header("location: miCuenta.php");
+        Autentificador::seteoSession($usuarioEncontrado);
+        if(isset($_POST["recordar"])){
+          Autentificador::seteoCookies($usuarioEncontrado);
+        }
+        if (Autentificador::validarUsuario()){
+          redirect("miCuenta.php");
           exit;
         }else{
-          header("location: registro.php");
-          exit;
+          redirect("registro.php");
         }
       }
       
@@ -25,6 +29,8 @@ if($_POST){
   }
 
 }
+
+
 ?>
 <?php
 include_once('head.php');

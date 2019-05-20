@@ -1,7 +1,7 @@
 <?php
-session_start();
+/*session_start();*/
 
-function validar($datos,$bandera){
+/*function validar($datos,$bandera){
     $errores=[];
     if(isset($datos["nombre"])){
         $nombre = trim($datos["nombre"]);
@@ -50,7 +50,7 @@ function persistir($campo){
     }
 }
 
-function armarAvatar($imagen){
+/*  function armarAvatar($imagen){
     $nombre = $imagen["avatar"]["name"];
     $ext = pathinfo($nombre,PATHINFO_EXTENSION);
     $archivoOrigen = $imagen["avatar"]["tmp_name"];
@@ -62,9 +62,9 @@ function armarAvatar($imagen){
     move_uploaded_file($archivoOrigen,$archivoDestino);
     $avatar = $avatar.".".$ext;
     return $avatar;
-}
+}*/
 
-function armarRegistro($datos,$imagen){
+/*function armarRegistro($datos,$imagen){
     $usuario = [
         "nombre"=>$datos["nombre"],
         "email"=>$datos["email"],
@@ -74,12 +74,12 @@ function armarRegistro($datos,$imagen){
     ];
     return $usuario;
 }
-function guardarUsuario($usuario){
+/*function guardarUsuario($usuario){
     $jsusuario = json_encode($usuario);
     file_put_contents('usuarios.json',$jsusuario. PHP_EOL, FILE_APPEND);
-}
+}*/
 
-function buscarEmail($email){
+/*function buscarEmail($email){
     $usuarios = abrirBaseDatos();
     if($usuarios!==null){
         foreach ($usuarios as $usuario) {
@@ -90,9 +90,9 @@ function buscarEmail($email){
     }
     
     return null;
-}
+}*/
 
-function abrirBaseDatos(){
+/*function abrirBaseDatos(){
     if(file_exists("usuarios.json")){
         $baseDatosJson= file_get_contents("usuarios.json");
         $baseDatosJson = explode(PHP_EOL,$baseDatosJson);
@@ -104,9 +104,9 @@ function abrirBaseDatos(){
     }else{
         return null;
     }    
-}
+}*/
 
-function armarRegistroOlvide($datos){
+/*function armarRegistroOlvide($datos){
     $usuarios = abrirBaseDatos();
     
     foreach ($usuarios as $key=>$usuario) {
@@ -124,9 +124,9 @@ function armarRegistroOlvide($datos){
         file_put_contents('usuarios.json',$jsusuario. PHP_EOL,FILE_APPEND);
     }
  
-}
+}*/
 
-function seteoUsuario($user,$dato){
+/*function seteoUsuario($user,$dato){
     $_SESSION["nombre"]=$user["nombre"];
     $_SESSION["email"] = $user["email"];
     $_SESSION["perfil"]= $user["perfil"];
@@ -135,8 +135,8 @@ function seteoUsuario($user,$dato){
         setcookie("email",$dato["email"],time()+3600);
         setcookie("password",$dato["password"],time()+3600);
     }
-}
-function validarUsuario(){
+}*/
+/*function validarUsuario(){
     if($_SESSION["email"]){
         return true;
     }elseif ($_COOKIE["email"]) {
@@ -146,4 +146,4 @@ function validarUsuario(){
         return false;
     }
     
-}
+}*/

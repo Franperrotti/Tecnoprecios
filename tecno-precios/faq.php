@@ -65,7 +65,7 @@ include_once('serchbar.php');
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
-              <p> <a href="https://www.facebook.com" target="_blank">Registrate</a> en TecnoPrecios.com y empezá a disfrutar de todos nuestros descuentos y promociones.</P>
+              <p> <a href="registro.php" target="_blank">Registrate</a> en TecnoPrecios.com y empezá a disfrutar de todos nuestros descuentos y promociones.</P>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ include_once('serchbar.php');
           </div>
           <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
             <div id="faq-box-align" class="card-body">
-              <p>Podes verificar si tú compra está registrada, ingresando a <strong><a href="https://www.facebook.com"" target="_blanck">Mi cuenta</a></strong>. Para ingresar a Mi cuenta, tenés que registrarte. Una vez registrado, ingresá a la sección Mis compras.</P>
+              <p>Podes verificar si tú compra está registrada, ingresando a <strong><a href="login.php" target="_blanck">Mi cuenta</a></strong>. Para ingresar a Mi cuenta, tenés que registrarte. Una vez registrado, ingresá a la sección Mis compras.</P>
               <p>En el detalle de la compra tenes los datos ingresados, así como también la opción de descargar tú factura. Si tenés problemas, podés completar el siguiente formulario.</p>
             </div>
           </div>
@@ -126,7 +126,7 @@ include_once('serchbar.php');
           </div>
           <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
             <div class="card-body">
-              <p><a href="https://www.facebook.com" target="_blank">Iniciá sesión</a>
+              <p><a href="login.php" target="_blank">Iniciá sesión</a>
               en TecnoPrecios.com para cambiar tu contraseña.</p>
             </div>
           </div>
