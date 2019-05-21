@@ -4,8 +4,12 @@ class Validador{
     public function validacionUsuario($usuario){
         $errores=array();
         $nombre = trim($usuario->getNombre());
+        
         if(isset($nombre)){
-            if(empty($nombre)){
+            if(!preg_match("/^[a-zA-Z0-9]*$/", $nombre)){
+                $errores["nombre"]= "Caracteres invalidos";
+            }
+            else if(empty($nombre)){
             $errores["nombre"]= "Complete su nombre de usuario";
             }
         }
