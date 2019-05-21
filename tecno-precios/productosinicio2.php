@@ -26,7 +26,7 @@ include_once('head.php');
               <a class="nav-link" href="#">Tv</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Lavaropas</a>
+              <a class="nav-link" href="#">Lavarropas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"> Heladera</a>
@@ -35,7 +35,7 @@ include_once('head.php');
               <a class="nav-link" href="#">Aire Acondicionado</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contactanos</a>
+              <a class="nav-link" href="#">Contáctanos</a>
               </span>
             </li>
             <li class="nav-item">
