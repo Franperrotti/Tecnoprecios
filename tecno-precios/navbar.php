@@ -26,7 +26,7 @@ include_once('head.php');
               <a class="nav-link" href="paginaproductos.php">Tv</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="paginaproductos.php">Lavaropas</a>
+              <a class="nav-link" href="paginaproductos.php">Lavarropas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="paginaproductos.php"> Heladera</a>
