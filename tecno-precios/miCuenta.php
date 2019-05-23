@@ -28,7 +28,7 @@ include_once('searchbar3.php');
     <img  id="sesion" src="img/imagenesUsuarios<?=$_SESSION["avatar"];?>" alt="Avatar" >
     </p>
    <br>
-    <button type="button" class=" formatoform btn btn-outline-primary btn-lg login"> <a href="index.php"> Cerrar Sesión</a> </button>
+    <button type="button" class=" formatoform btn btn-outline-primary btn-lg login"> <a href="logout.php"> Cerrar Sesión</a> </button>
     
     </article> 
   </section>

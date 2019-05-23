@@ -1,5 +1,11 @@
 
 <?php
+require_once('autoload.php');
+
+if (isset($_SESSION["email"])){
+    redirect("miCuenta.php");
+  }
+
 include_once('head.php');
 ?>
 

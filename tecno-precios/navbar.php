@@ -3,7 +3,7 @@
 include_once('head.php');
 ?>
 
-  <title>HOME</title>
+  <title>TecnoPrecios</title>
 </head>
 <body>
   <div class="container-fluid p-0">

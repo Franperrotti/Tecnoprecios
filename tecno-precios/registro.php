@@ -16,7 +16,9 @@ if ($_POST){
     }
   }
 }
-
+if (isset($_SESSION["email"])){
+  redirect("miCuenta.php");
+}
 
 ?>
 
