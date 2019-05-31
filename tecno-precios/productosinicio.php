@@ -1,6 +1,10 @@
 
 <?php
-include_once("productos/productos.php");
+require_once("autoload_fran.php");
+
+$sql= "SELECT *  FROM images order by rand() limit 3";
+$consulta = $pdo->query($sql);
+$producto = $consulta->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <?php
@@ -12,7 +16,9 @@ include_once('head.php');
 </head>
 
 <body>
-  <div class="container-fluid p-0">
+<div id="content">
+
+<div class="container-fluid p-0">
  <!-- Productos -->
 
 <section class= "productos" id="wrap">
@@ -20,7 +26,7 @@ include_once('head.php');
 
 <?php foreach ($producto as $key => $value)  :?>
 <figure>
-          <img src="<?="img/".$value["imagen"]?>">
+          <img src="<?="img/".$value["image"]?>">
 
           <figcaption><?=$value["titulo"]?></figcaption>
           <span class="price"><?=$value["price"]?></span>
@@ -33,4 +39,4 @@ include_once('head.php');
 </section>
 
 
-    </div>
+</div>

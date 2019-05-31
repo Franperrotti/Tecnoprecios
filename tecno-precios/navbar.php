@@ -23,6 +23,9 @@ include_once('head.php');
               <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="subirproductos.php">Subir-Productos</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="paginaproductos.php">Tv</a>
             </li>
             <li class="nav-item">
