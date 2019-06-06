@@ -26,6 +26,9 @@ include_once('head.php');
               <a class="nav-link" href="subirproductos.php">Subir-Productos</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="modificar_productos.php">modificar_productos</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="paginaproductos.php">Tv</a>
             </li>
             <li class="nav-item">

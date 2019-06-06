@@ -8,6 +8,7 @@ require_once("clases/Autentificador.php");
 require_once("clases/BaseDatos.php");
 require_once("clases/BaseJson.php");
 require_once("clases/Hashear.php");
+// require_once("clases/dbmysql.php");
 
 $validar = new Validador();
 $registro = new ArmarRegistro();
