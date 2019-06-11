@@ -22,7 +22,7 @@ include_once('searchbar3.php');
   
   <section class="row  text-center ">
     <article class="col-12  " >
-    <h1 class="__h1form">Bienvenido: <?=$_SESSION["nombre"];?> </h1>
+    <h1 class="__h1form">Bienvenido: <?=$_SESSION["name"];?> </h1>
     <br>
     <p>
     <img  id="sesion" src="img/users/imagenesUsuarios<?=$_SESSION["avatar"];?>" alt="Avatar" >

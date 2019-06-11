@@ -2,12 +2,11 @@
 
 require_once("autoload.php");
 if($_POST){
-  $tipoConexion= "MYSQL";
-  if($tipoConexion = "JSON"){
+  $tipoConexion = "MYSQL";
+  if($tipoConexion == "Json"){
   $usuario = new Usuario($_POST["email"],$_POST["password"]);
   $errores= $validar->validacionLogin($usuario);
   if(count($errores)==0){
-
     $usuarioEncontrado = $Json->buscarEmail($usuario->getEmail());
     if($usuarioEncontrado == null){
       $errores["email"]="Usuario no existe";
@@ -35,7 +34,7 @@ if($_POST){
     if(count($errores)==0){
   
       $usuarioEncontrado = BaseMYSQL::buscarEmail($usuario->getEmail(),$pdo,'users');
-      if($usuarioEncontrado == false){
+      if($usuarioEncontrado == null){
         $errores["email"]="Usuario no existe";
       }else{
         if(Autentificador::verificarPassword($usuario->getPassword(),$usuarioEncontrado["password"])===false){

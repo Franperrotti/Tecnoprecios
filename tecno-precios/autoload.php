@@ -24,7 +24,7 @@ $pdo = BaseMYSQL::conexion($host,$db,$usuario,$password,$puerto,$charset);
 
 $validar = new Validador();
 $registro = new ArmarRegistro();
-$Json = new BaseJson("usuarios.json");
+//$Json = new BaseJson("usuarios.json");
 Autentificador::iniciarSession();
 
 

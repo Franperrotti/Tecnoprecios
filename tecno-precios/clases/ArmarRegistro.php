@@ -16,11 +16,11 @@ class ArmarRegistro{
             
     public function armarUsuario($registro,$avatar){
         $usuario = [
-            "nombre"=>$registro->getNombre(),
+            "name"=>$registro->getNombre(),
             "email"=>$registro->getEmail(),
             "password"=> Hashear::hashPassword($registro->getPassword()),
             "avatar"=>$avatar,
-            "perfil"=>1
+            "role"=>1
         ];
     
         return $usuario;

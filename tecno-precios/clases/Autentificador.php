@@ -11,9 +11,9 @@ class Autentificador{
     }
 
     static public function seteoSession($user){
-        $_SESSION["nombre"]=$user["nombre"];
+        $_SESSION["name"]=$user["name"];
         $_SESSION["email"] = $user["email"];
-        $_SESSION["perfil"]= $user["perfil"];
+        $_SESSION["role"]= $user["role"];
         $_SESSION["avatar"]= $user["avatar"];
     }
 

@@ -3,7 +3,7 @@
 require_once("autoload.php");
 if ($_POST){
   $tipoConexion = "MYSQL";
-  if($tipoConexion=="JSON"){
+  if($tipoConexion=="Json"){
   $usuario = new Usuario($_POST["email"],$_POST["password"],$_POST["repassword"],$_POST["nombre"],$_FILES );
   $errores = $validar->validacionUsuario($usuario, $_POST["repassword"]);
   if(count($errores)==0){
