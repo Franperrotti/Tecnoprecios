@@ -12,7 +12,7 @@ if (isset($_SESSION["email"])){
     include_once('serchbar.php');
 }
 // navbar
-include_once('navbar.php');
+//include_once('navbar.php');
 
 
 $sql= "SELECT *  FROM products";

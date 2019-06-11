@@ -12,7 +12,7 @@ if (isset($_SESSION["email"])){
     include_once('serchbar.php');
 }
 // navbar
-include_once('navbar.php');
+//include_once('navbar.php');
 
 
 // poner el mensaje que luego guardo para ver si estoy subiendo bien 
