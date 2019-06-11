@@ -13,7 +13,6 @@ $usuarioSeleccionado = Query::mostrarUsuario($pdo,'users',$id_usuario)
   </head>
   <body>
     <h1>Datos del usuario</h1>
-    <!--Aquí les dejo a su imaginación y creativodad para jugar con esto como quieran-->
     <?php foreach ($usuarioSeleccionado as $key => $value):?>
       <h2><?= $value["name"] ;?></h2>
     <?php endforeach;?>

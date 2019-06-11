@@ -1,6 +1,14 @@
 <?php
 require_once("autoload.php");
 
+if (isset($_SESSION["email"])){
+  include_once('searchbar5.php');
+}else{
+  include_once('serchbar.php');
+}
+
+include_once('head.php');
+
 $listadoUsuarios = Query::listado($pdo,'users');
 
  ?>

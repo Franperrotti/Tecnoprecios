@@ -1,4 +1,6 @@
 <?php 
+
+require_once("autoload.php");
 // head
 include_once('head.php');
 
@@ -12,8 +14,6 @@ if (isset($_SESSION["email"])){
 // navbar
 include_once('navbar.php');
 
-// conectar con la base de datos 
-require_once("autoload.php");
 
 // poner el mensaje que luego guardo para ver si estoy subiendo bien 
 $msg = "";

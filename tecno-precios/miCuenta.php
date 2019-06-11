@@ -6,6 +6,18 @@ if(!isset($_SESSION["email"])) {
     redirect("registro.php");
 }
 ?>
+
+<?php
+include_once('searchbar3.php');
+?>
+ <?php
+if($_SESSION["role"]==9){
+    include_once('navbarAdmin.php');
+}
+ 
+ ?>
+
+
 <?php
 include_once('head.php');
 ?>
@@ -14,10 +26,7 @@ include_once('head.php');
 </head>
 <body>
 
-<?php
-include_once('searchbar3.php');
-?>
-    
+
 <div class="container">
   
   <section class="row  text-center ">
@@ -27,6 +36,12 @@ include_once('searchbar3.php');
     <p>
     <img  id="sesion" src="img/users/imagenesUsuarios<?=$_SESSION["avatar"];?>" alt="Avatar" >
     </p>
+    <p>
+    <?php if($_SESSION["role"]==9):?>
+        <a href="listadoUsuariosAdmin.php"></a>
+     <?php endif;?>
+
+    </p>
    <br>
     <button type="button" class=" formatoform btn btn-outline-primary btn-lg login"> <a href="logout.php"> Cerrar Sesión</a> </button>
     
@@ -35,3 +50,5 @@ include_once('searchbar3.php');
 </div>
 
 <?php include_once('script.php'); ?>
+
+

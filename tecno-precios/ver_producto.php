@@ -1,4 +1,7 @@
 <?php
+
+require_once("autoload.php");
+
 include_once('head.php');
 
 // serchbar
@@ -11,24 +14,19 @@ if (isset($_SESSION["email"])){
 // navbar
 include_once('navbar.php'); ?>
 
-
-<!DOCTYPE html>
-
-
 <?php
 
 
-require_once("autoload.php");
 if (isset($_GET["id"])) {
     $id_producto=$_GET["id"];
-$sql= "SELECT *  FROM tecnoprecios.products where id = '$id_producto'";
+$sql= "SELECT *  FROM products where id = '$id_producto'";
 $consulta = $pdo->query($sql);
 $result = $consulta->fetchAll(PDO::FETCH_ASSOC);
 }
 
 
  ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <title>Productos tecno precios</title>

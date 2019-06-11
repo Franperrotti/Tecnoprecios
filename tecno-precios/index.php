@@ -12,6 +12,7 @@ if (isset($_SESSION["email"])){
 }
 
 // navbar
+
 include_once('navbar.php');
 
 

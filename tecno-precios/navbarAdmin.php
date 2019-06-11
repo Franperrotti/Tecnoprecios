@@ -1,4 +1,3 @@
-
 <?php
 include_once('head.php');
 ?>
@@ -22,31 +21,16 @@ include_once('head.php');
             <li class="nav-item active">
               <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
-           <!--  <li class="nav-item">
-              <a class="nav-link" href="subirproductos.php">Subir-Productos</a>
+            <li class="nav-item">
+              <a class="nav-link" href="subirproductos.php">Subir Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="modificar_productos.php">modificar_productos</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="paginaproductos.php">Tv</a>
+              <a class="nav-link" href="modificar_productos.php">Modificar Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="paginaproductos.php">Lavarropas</a>
+              <a class="nav-link" href="listadoUsuarios.php">Modificar Usuarios</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="paginaproductos.php"> Heladera</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="paginaproductos.php">Aire Acondicionado</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="paginaproductos.php">Contactanos</a>
-              </span>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="paginaproductos.php"><i class="fas fa-shopping-cart"></i></a>
-            </li>
+            
           </ul>
 
         </div>

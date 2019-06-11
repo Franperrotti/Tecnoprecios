@@ -1,5 +1,13 @@
 <?php
+require_once("autoload.php");
+
 include_once("productos/productos.php");
+?>
+<?php
+
+$sql= "SELECT *  FROM products order by rand() limit 3";
+$consulta = $pdo->query($sql);
+$producto = $consulta->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <?php
@@ -50,14 +58,14 @@ include_once('head.php');
 <section class=productos70>
  <!-- Productos -->
 
-<section class= "productos" id="wrap">
+ <section class= "productos" id="wrap">
 <div id="columns" class="columns_4">
 
 <?php foreach ($producto as $key => $value)  :?>
 <figure>
-          <img src="<?="img/".$value["imagen"]?>">
+          <img src="<?="img/products".$value["image"]?>">
 
-          <figcaption><?=$value["titulo"]?></figcaption>
+          <figcaption><?=$value["title"]?></figcaption>
           <span class="price"><?=$value["price"]?></span>
           <a class="button" href="#">Comprar ahora</a>
         </figure>

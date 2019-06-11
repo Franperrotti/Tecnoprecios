@@ -1,5 +1,7 @@
 <?php
 
+require_once("autoload.php");
+
 include_once('head.php');
 
 // serchbar
@@ -12,9 +14,8 @@ if (isset($_SESSION["email"])){
 // navbar
 include_once('navbar.php');
 
-require_once("autoload.php");
 
-$sql= "SELECT *  FROM tecnoprecios.products";
+$sql= "SELECT *  FROM products";
 	$consulta = $pdo->query($sql);
     $result = $consulta->fetchAll(PDO::FETCH_ASSOC);
     
