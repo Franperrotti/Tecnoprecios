@@ -2,6 +2,8 @@
 
 require_once("autoload.php");
 if($_POST){
+  $tipoConexion= "MYSQL";
+  if($tipoConexion = "JSON"){
   $usuario = new Usuario($_POST["email"],$_POST["password"]);
   $errores= $validar->validacionLogin($usuario);
   if(count($errores)==0){
@@ -26,6 +28,34 @@ if($_POST){
       }
       
     }  
+  }
+  }else{
+    $usuario = new Usuario($_POST["email"],$_POST["password"]);
+    $errores= $validar->validacionLogin($usuario);
+    if(count($errores)==0){
+  
+      $usuarioEncontrado = BaseMYSQL::buscarEmail($usuario->getEmail(),$pdo,'users');
+      if($usuarioEncontrado == false){
+        $errores["email"]="Usuario no existe";
+      }else{
+        if(Autentificador::verificarPassword($usuario->getPassword(),$usuarioEncontrado["password"])===false){
+          $errores["password"]="Error en los datos, verifique";
+        }else{
+          Autentificador::seteoSession($usuarioEncontrado);
+          if(isset($_POST["recordar"])){
+            Autentificador::seteoCookies($usuarioEncontrado);
+          }
+          if (Autentificador::validarUsuario()){
+            redirect("miCuenta.php");
+            exit;
+          }else{
+            redirect("registro.php");
+          }
+        }
+        
+      }  
+    }
+
   }
 
 }

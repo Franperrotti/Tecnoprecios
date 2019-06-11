@@ -2,6 +2,8 @@
 <?php
 require_once("autoload.php");
 if ($_POST){
+  $tipoConexion = "MYSQL";
+  if($tipoConexion=="JSON"){
   $usuario = new Usuario($_POST["email"],$_POST["password"],$_POST["repassword"],$_POST["nombre"],$_FILES );
   $errores = $validar->validacionUsuario($usuario, $_POST["repassword"]);
   if(count($errores)==0){
@@ -15,7 +17,25 @@ if ($_POST){
       redirect("login.php");
     }
   }
+}else{
+  $usuario = new Usuario($_POST["email"],$_POST["password"],$_POST["repassword"],$_POST["nombre"],$_FILES );
+  $errores = $validar->validacionUsuario($usuario, $_POST["repassword"]);
+  if(count($errores)==0){
+    $usuarioEncontrado = BaseMYSQL::buscarEmail($usuario->getEmail(),$pdo,'users');
+    if($usuarioEncontrado!= null){
+      $errores["email"]="Usuario ya registrado";
+    }else{
+      $avatar = $registro->armarAvatar($_FILES);
+      baseMYSQL::guardarUsuario($pdo,$usuario,'users',$avatar);
+      redirect("login.php");
+      }
+    }
+  }
+
 }
+
+
+
 if (isset($_SESSION["email"])){
   redirect("miCuenta.php");
 }

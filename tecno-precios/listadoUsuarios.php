@@ -1,28 +1,11 @@
 <?php
-
-include_once('head.php');
-
-// serchbar
-
-if (isset($_SESSION["email"])){
-    include_once('searchbar5.php');
-}else{
-    include_once('serchbar.php');
-}
-// navbar
-include_once('navbar.php');
-
 require_once("autoload.php");
 
-$sql= "SELECT *  FROM tecnoprecios.products";
-	$consulta = $pdo->query($sql);
-    $result = $consulta->fetchAll(PDO::FETCH_ASSOC);
-    
-
+$listadoUsuarios = Query::listado($pdo,'users');
 
  ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/master.css">
@@ -33,7 +16,7 @@ $sql= "SELECT *  FROM tecnoprecios.products";
 <body>
   <div class="container">
     <div class="">
-      <h1>Modificar Productos</h1>
+      <h1>Listado de Usuarios</h1>
     </div>
 
       <div class="">
@@ -41,24 +24,27 @@ $sql= "SELECT *  FROM tecnoprecios.products";
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Producto</th>
-              <th scope="col">View</th>
-              <th scope="col">Eliminar</th>
-           
+              <th scope="col">Usuarios</th>
+              <th scope="col">Mostrar</th>
+              <th scope="col">Modificar</th>
+              <th scope="col">Borrar</th>
             </tr>
           </thead>
           <tbody>
-              <?php foreach ($result as $key => $value):?>
+              <?php foreach ($listadoUsuarios as $key => $value):?>
                 <tr>
 
                   <th scope="row"><?= $value["id"] ?></th>
-                  <td><?=$value["title"];?></td>
-                  <td><a href="ver_producto.php?id=<?=$value['id'];?>">
+                  <td><?=$value["name"];?></td>
+                  <td><a href="mostrarUsuario.php?id=<?=$value['id'];?>">
                         <i class="far fa-eye"></i>
                       </a>
                   </td>
-                 
-                  <td><a href="eliminar_producto.php?id=<?=$value['id'];?>">
+                  <td><a href="modificarUsuario.php?id=<?=$value['id'];?>">
+                        <i class="far fa-edit"></i>
+                      </a>
+                  </td>
+                  <td><a href="eliminarUsuario.php?id=<?=$value['id'];?>">
                         <i class="far fa-trash-alt"></i>
                       </a>
                   </td>
@@ -68,6 +54,7 @@ $sql= "SELECT *  FROM tecnoprecios.products";
           </tbody>
       </div>
   </div>
+  <a href="perfil.php">Retornar</a>
 </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

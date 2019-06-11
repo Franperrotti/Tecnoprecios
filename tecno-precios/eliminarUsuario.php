@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 
 <?php
-
-
-
 require_once("autoload.php");
-
 if (isset($_GET["id"])) {
-    $id_producto=$_GET["id"];
-$sql= "SELECT *  FROM products where id = '$id_producto'";
-$consulta = $pdo->query($sql);
-$result = $consulta->fetchAll(PDO::FETCH_ASSOC);
+  $id_usuario=$_GET["id"];
+  $usuarioSeleccionado = Query::mostrarUsuario($pdo,'users',$id_usuario);
 }
 
+//esto se ejecuta si el usuario indica que desea borrar el usuario
 if (isset($_POST["borrar"])) {
-  $sql="DELETE FROM tecnoprecios.products where id=:id";
-  $query=$pdo->prepare($sql);
-  $query->bindValue(':id',$_POST['id']);
-  $query->execute();
-  header('Location:modificar_productos.php');
+  Query::borrarUsuario($pdo,'users',$id_usuario);
+  header('Location:listadoUsuarios.php');
   exit;
 //var_dump($_POST);
 }
 elseif (isset ($_POST["no"])) {
-  header("Location:modificar_productos.php");
+  header("Location:listadoUsuarios.php");
   exit;
 }
-
  ?>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/styles_subirproductos.css" />
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -40,33 +30,21 @@ elseif (isset ($_POST["no"])) {
 
 
     <form class="" action="" method="post">
-      <p>Esta seguro que quiere eliminar este producto?</p>
+      <p>Esta seguro que quiere eliminar este usuario?</p>
       <input type="submit" name="borrar" value="si">
       <input type="submit" name="no" value="no">
-      <input type="hidden" name="id" value="<?=$id_producto;?>">
+      <input type="hidden" name="id" value="<?=$id_usuario;?>">
    </form>
 
-   <div id="content">
-
-<div class="container-fluid p-0">
- <!-- Productos -->
-
-<section class= "productos" id="wrap">
-<div id="columns" class="columns_4">
-
-   <?php foreach ($result as $key => $value)  :?>
-<figure>
-          <img src="<?="img/products".$value["image"]?>">
-
-          <figcaption><?=$value["title"]?></figcaption>
-          <span class="price"><?=$value["price"]?></span>
-          <a class="button" href="#">Comprar ahora</a>
-        </figure>
-
-        <?php endforeach ?>
-        </div>
-</section>
-
+    <?php foreach ($usuarioSeleccionado as $key => $value):?>
+      <h1><?= $value["name"] ;?></h1>
+    <?php endforeach;?>
+    <ul>
+    <?php foreach ($usuarioSeleccionado as $index => $attributes) : ?>
+      <?php foreach($attributes as $key => $value): ?>
+        <li><?= $key." : ".$value ?> </li>
+      <?php endforeach;?>
+    <?php endforeach;?>
     </ul>
 </div>
   </body>

@@ -12,29 +12,29 @@ if (isset($_SESSION["email"])){
 // navbar
 include_once('navbar.php');
 
-// conectar cojn la base de datos 
-require_once("autoload_fran.php");
+// conectar con la base de datos 
+require_once("autoload.php");
 
 // poner el mensaje que luego guardo para ver si estoy subiendo bien 
 $msg = "";
 
-  // si apritan el boton de upload
+  // si aprietan el boton de upload
   if (isset($_POST['upload'])) {
 		
   	// agarrar el nombre de la imagen 
 		$image = $_FILES['image']['name'];
 		
   	// agarrar el texto 
-		$titulo = $_POST['titulo'];
+		$title = $_POST['title'];
 
 			// agarrar el texto 
 			$price = $_POST['price'];
 
   	// donde guardamos la imagen 
-		$target = "img/".basename($image);
+		$target = "img/products".basename($image);
  
 
-		$sql = "INSERT INTO images (image, titulo, price) VALUES ('$image', '$titulo', '$price')";
+		$sql = "INSERT INTO products (image, title, price) VALUES ('$image', '$title', '$price')";
 		$query= $pdo ->prepare($sql);
 		$query -> execute();
 
@@ -63,7 +63,7 @@ $msg = "";
 // ejecuta el querry en la base de datos 
 
 
-	$sql= "SELECT *  FROM images";
+	$sql= "SELECT *  FROM products";
 	$consulta = $pdo->query($sql);
 	$producto = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
@@ -87,9 +87,9 @@ $msg = "";
 
 <?php foreach ($producto as $key => $value)  :?>
 <figure>
-          <img src="<?="img/".$value["image"]?>">
+          <img src="<?="img/products".$value["image"]?>">
 
-          <figcaption><?=$value["titulo"]?></figcaption>
+          <figcaption><?=$value["title"]?></figcaption>
           <span class="price"><?=$value["price"]?></span>
           <a class="button" href="#">Comprar ahora</a>
         </figure>
@@ -113,7 +113,7 @@ $msg = "";
       	id="text" 
       	cols="40" 
       	rows="1" 
-      	name="titulo" 
+      	name="title" 
       	placeholder="titulo del producto"></textarea>
   	</div>
 		<div>

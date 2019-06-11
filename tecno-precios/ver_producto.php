@@ -18,10 +18,10 @@ include_once('navbar.php'); ?>
 <?php
 
 
-require_once("autoload_fran.php");
+require_once("autoload.php");
 if (isset($_GET["id"])) {
     $id_producto=$_GET["id"];
-$sql= "SELECT *  FROM images where id = '$id_producto'";
+$sql= "SELECT *  FROM tecnoprecios.products where id = '$id_producto'";
 $consulta = $pdo->query($sql);
 $result = $consulta->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -31,7 +31,7 @@ $result = $consulta->fetchAll(PDO::FETCH_ASSOC);
 <!doctype html>
 <html lang="es">
 <head>
-<title>productos tecno precios</title>
+<title>Productos tecno precios</title>
 <link rel="stylesheet" href="css/styles_subirproductos.css" />
 </head>
 <body>
@@ -46,9 +46,9 @@ $result = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 <?php foreach ($result as $key => $value)  :?>
 <figure>
-          <img src="<?="img/".$value["image"]?>">
+          <img src="<?="img/products".$value["image"]?>">
 
-          <figcaption><?=$value["titulo"]?></figcaption>
+          <figcaption><?=$value["title"]?></figcaption>
           <span class="price"><?=$value["price"]?></span>
           <a class="button" href="#">Comprar ahora</a>
         </figure>

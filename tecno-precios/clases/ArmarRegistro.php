@@ -5,7 +5,7 @@ class ArmarRegistro{
         $ext = pathinfo($nombre,PATHINFO_EXTENSION);
         $archivoOrigen = $imagen["avatar"]["tmp_name"];
         $archivoDestino = dirname(__DIR__);
-        $archivoDestino = $archivoDestino."/img/imagenesUsuarios";
+        $archivoDestino = $archivoDestino."/img/users/imagenesUsuarios";
         $avatar = uniqid();
         $archivoDestino = $archivoDestino.$avatar;
         $archivoDestino = $archivoDestino.".".$ext;

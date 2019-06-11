@@ -25,7 +25,7 @@ include_once('searchbar3.php');
     <h1 class="__h1form">Bienvenido: <?=$_SESSION["nombre"];?> </h1>
     <br>
     <p>
-    <img  id="sesion" src="img/imagenesUsuarios<?=$_SESSION["avatar"];?>" alt="Avatar" >
+    <img  id="sesion" src="img/users/imagenesUsuarios<?=$_SESSION["avatar"];?>" alt="Avatar" >
     </p>
    <br>
     <button type="button" class=" formatoform btn btn-outline-primary btn-lg login"> <a href="logout.php"> Cerrar Sesión</a> </button>

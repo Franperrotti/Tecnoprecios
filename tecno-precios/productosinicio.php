@@ -1,8 +1,8 @@
 
 <?php
-require_once("autoload_fran.php");
+require_once("autoload.php");
 
-$sql= "SELECT *  FROM images order by rand() limit 3";
+$sql= "SELECT *  FROM products order by rand() limit 3";
 $consulta = $pdo->query($sql);
 $producto = $consulta->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -26,9 +26,9 @@ include_once('head.php');
 
 <?php foreach ($producto as $key => $value)  :?>
 <figure>
-          <img src="<?="img/".$value["image"]?>">
+          <img src="<?="img/products".$value["image"]?>">
 
-          <figcaption><?=$value["titulo"]?></figcaption>
+          <figcaption><?=$value["title"]?></figcaption>
           <span class="price"><?=$value["price"]?></span>
           <a class="button" href="#">Comprar ahora</a>
         </figure>
