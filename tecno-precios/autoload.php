@@ -15,7 +15,7 @@ require_once("clases/Query.php");
 $host = "localhost";
 $db = "tecnoprecios";
 $usuario = "root";
-$password = "";
+$password = "root";
 $puerto = "3306";
 $charset = "utf8mb4";
 
